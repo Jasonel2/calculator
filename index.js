@@ -62,7 +62,7 @@ for (const btn of operatorBtns) {
         if (num1 != "" && num2 != "") {
             let num = operate(operator, parseFloat(num1), parseFloat(num2))
             display.textContent = Math.round(num * 100) / 100
-            num1 = Math.round(num * 100) / 100;
+            num1 = String(Math.round(num * 100) / 100);
             num2 = "";
         }
         if (btn.textContent == "×") {
@@ -86,7 +86,7 @@ equalBtn.addEventListener("click", () => {
     if (num1 != "" && num2 != "") {
         let num = operate(operator, parseFloat(num1), parseFloat(num2))
         display.textContent = Math.round(num * 100) / 100
-        num1 = Math.round(num * 100) / 100;
+        num1 = String(Math.round(num * 100) / 100);
         num2 = "";
     }
 })
@@ -101,12 +101,14 @@ clearBtn.addEventListener("click", () => {
 
 const decimalBtn = document.querySelector(".decimal");
 decimalBtn.addEventListener("click", () => {
-    if (!num1.includes(".")) {
+    if (!num1.includes(".") && operator == "") {
         num1 += ".";
         display.textContent += ".";
     }
     else if (!num2.includes(".")) {
         num2 += ".";
+        display.textContent = "";
+        display.textContent += ".";
     }
 })
 
