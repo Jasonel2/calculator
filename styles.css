@@ -1,0 +1,40 @@
+.digit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;    
+    width: 250px;
+    gap: 25px;
+
+}
+
+body {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding-top: 100px;
+}
+
+
+button {
+    height: 50px;
+    width: 50px;
+    font-size: large;
+}
+
+.operator-container {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+}
+
+.e-c-container {
+    display: flex;
+    gap: 10px;
+}
+
+.clear {
+    text-align: center;
+}
